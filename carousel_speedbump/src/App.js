@@ -15,9 +15,9 @@ class App extends Component {
 
   render() {
 
-    const speedBumpList = data.map(list => {
+    const speedBumpList = data.map((list,i) => {
       return (
-        <Carousel.Item>
+        <Carousel.Item key={i}>
           <img width={'100%'} height={'100%'} alt="900x500" src={list.img} />
           <div className="date">
             <h4>{list.date}</h4>
