@@ -4,38 +4,51 @@ import { Button } from 'react-bootstrap';
 import data from './data.json';
 import SpeedbumpData from './SpeedbumpData.js'
 import './App.css';
+import speedbump from './speedbump.png'
+import './App.css'
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-        realdata: []
+        speedbumpList: []
     }
   }
 
   myCallback = (dataFromChild) => {
-    if (this.state.realdata !== dataFromChild) {
+    if (this.state.speedbumpList !== dataFromChild) {
       this.setState({
-      realdata: dataFromChild
+      speedbumpList: dataFromChild
       })
     }
 
   }
 
-  render() {
-    console.log("realdata", this.state.realdata)
+  removeTags = (string, array) => {
+  return array ? string.split("<").filter(function(val){ return f(array, val); }).map(function(val){ return f(array, val); }).join("") : string.split("<").map(function(d){ return d.split(">").pop(); }).join("");
+    function f(array, value){
+      return array.map(function(d){ return value.includes(d + ">"); }).indexOf(true) != -1 ? "<" + value : value.split(">")[1];
+    }
+}
 
-    const speedBumpList = this.state.realdata.map((list,i) => {
+
+  render() {
+    console.log("speedbumpList", this.state.speedbumpList[0])
+    if (this.state.speedbumpList[0]) {
+    console.log("done", this.removeTags(this.state.speedbumpList[0].speedbump_sections[0].body));
+
+    }
+
+    const speedBumpList = this.state.speedbumpList.map((list,i) => {
       return (
         <Carousel.Item key={i}>
-          <img width={'100%'} height={'100%'} alt="900x500" src="https://images.pexels.com/photos/775416/pexels-photo-775416.jpeg" />
-          <div className="date">
-            <h4>{list.title}</h4>
+          <img width={'100%'} height={'80%'} alt="900x500" src={speedbump} />
+          <div className="title">
+            <h2>{list.title}</h2>
           </div>
           <Carousel.Caption>
-            <h3>{list.title}</h3>
-            <p>{list.description}</p>
+            <p className="caption">{this.removeTags(list.speedbump_sections[0].body.split(" ").splice(0,20).join(" ")) + "..."}</p>
             <Button bsStyle="primary" href={"https://app.quizzify.com/speedbumps/" + list.slug} target="_parent" style={{ marginBottom: 30 }}>
               Read More
 				  </Button>
