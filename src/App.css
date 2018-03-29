@@ -59,7 +59,7 @@ span.glyphicon.glyphicon-chevron-left::before {
 }
 
 .carousel-control.right:hover {
-    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(030,144,255) 450%);
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(030,144,255) 1000%);
 }
 
 .carousel-control.left {
@@ -67,5 +67,5 @@ span.glyphicon.glyphicon-chevron-left::before {
 }
 
 .carousel-control.left:hover {
-    background-image: linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(030,144,255) 450%);
+    background-image: linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(030,144,255) 1000%);
 }
