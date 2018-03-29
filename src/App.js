@@ -34,11 +34,6 @@ class App extends Component {
 
 
   render() {
-    console.log("speedbumpList", this.state.speedbumpList[0])
-    if (this.state.speedbumpList[0]) {
-    console.log("done", this.removeTags(this.state.speedbumpList[0].speedbump_sections[0].body));
-
-    }
 
     const speedBumpList = this.state.speedbumpList.map((list,i) => {
       return (

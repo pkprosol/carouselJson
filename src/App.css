@@ -69,3 +69,16 @@ span.glyphicon.glyphicon-chevron-left::before {
 .carousel-control.left:hover {
     background-image: linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(030,144,255) 1000%);
 }
+
+
+@media only screen and (max-width: 500px) {
+
+    h4 {
+        font-size: 15px;
+    }
+
+    p.caption{
+        display: none;
+    }
+    
+}
