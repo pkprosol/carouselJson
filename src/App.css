@@ -17,5 +17,9 @@ body{
 .caption{
     color: black;
     text-shadow: none;
-    font-size: 18px;
+    font-size: 14px;
+}
+
+.carousel-caption {
+    padding-bottom: 0;
 }

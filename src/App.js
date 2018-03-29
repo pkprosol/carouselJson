@@ -45,9 +45,9 @@ class App extends Component {
         <Carousel.Item key={i}>
           <img width={'100%'} height={'80%'} alt="900x500" src={speedbump} />
           <div className="title">
-            <h2>{list.title}</h2>
+            <h3>{list.title}</h3>
           </div>
-          <Carousel.Caption>
+          <Carousel.Caption className="carousel-caption">
             <p className="caption">{this.removeTags(list.speedbump_sections[0].body.split(" ").splice(0,20).join(" ")) + "..."}</p>
             <Button bsStyle="primary" href={"https://app.quizzify.com/speedbumps/" + list.slug} target="_parent" style={{ marginBottom: 30 }}>
               Read More
