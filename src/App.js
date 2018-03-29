@@ -45,7 +45,7 @@ class App extends Component {
         <Carousel.Item key={i}>
           <img width={'100%'} height={'80%'} alt="900x500" src={speedbump} />
           <div className="title">
-            <h3>{list.title}</h3>
+            <h4>{list.title}</h4>
           </div>
           <Carousel.Caption className="carousel-caption">
             <p className="caption">{this.removeTags(list.speedbump_sections[0].body.split(" ").splice(0,20).join(" ")) + "..."}</p>
