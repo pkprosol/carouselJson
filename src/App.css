@@ -31,3 +31,41 @@ body{
 .carousel-indicators .active {
     background-color: lightgrey;
 }
+
+
+span.glyphicon.glyphicon-chevron-right::before {
+    border: 1px solid #1E90FF;
+    background-color: #1E90FF;
+    border-radius: 100%;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+span.glyphicon.glyphicon-chevron-left::before {
+    border: 1px solid #1E90FF;
+    background-color: #1E90FF;
+    border-radius: 100%;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+
+.carousel-control.right {
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 100%,rgba(030,144,255) 200%);
+}
+
+.carousel-control.right:hover {
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(030,144,255) 450%);
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 100%,rgba(030,144,255) 200%);
+}
+
+.carousel-control.left:hover {
+    background-image: linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(030,144,255) 450%);
+}
