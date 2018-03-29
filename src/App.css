@@ -23,3 +23,11 @@ body{
 .carousel-caption {
     padding-bottom: 0;
 }
+
+.carousel-indicators li {
+    border: 1px solid lightgrey;
+}
+
+.carousel-indicators .active {
+    background-color: lightgrey;
+}

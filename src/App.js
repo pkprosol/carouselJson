@@ -49,7 +49,7 @@ class App extends Component {
           </div>
           <Carousel.Caption className="carousel-caption">
             <p className="caption">{this.removeTags(list.speedbump_sections[0].body.split(" ").splice(0,20).join(" ")) + "..."}</p>
-            <Button bsStyle="primary" href={"https://app.quizzify.com/speedbumps/" + list.slug} target="_parent" style={{ marginBottom: 30 }}>
+            <Button bsStyle="primary" href={"https://app.quizzify.com/speedbumps/" + list.slug} target="_blank" style={{ marginBottom: 30 }}>
               Read More
 				  </Button>
           </Carousel.Caption>
