@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import dataReducer from './reducers/dataReducer'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootReducer = combineReducers({data: dataReducer})
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
